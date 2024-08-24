@@ -29,7 +29,7 @@
         .contCx3{
 
             display:grid;
-            grid-template-columns: repeat(3, 33.3%);
+            grid-template-columns: repeat(4, 25%);
             grid-template-rows: repeat(2, 50%);
 
             justify-items: center;
@@ -45,14 +45,52 @@
                 display: flex;
                 flex-direction: column;
 
-                .pr1{
-                    background-image: url('Pr.Marcelo.jpg');
-                    
-                    background-size:contain;
+               
+
+                @for $a from 1 through 8{
+
+                    .pr#{$a}{
+
+                        @if $a == 1{
+                            background-image:url('Pr.Marcelo.jpg');
+
+                        }@else if $a == 2{
+                            background-image:url('Pr.Djalma.jpg');
+
+                        }@else if $a == 3{
+                            background-image:url('PrLaura.jpg');
+
+                        }@else if $a == 4{
+                            background-image:url('PrKarine.jpg');
+
+                        }@else if $a == 5{
+                            background-image:url('BpaShirley.jpg');
+
+                        }@else if $a == 6{
+                            background-image:url('PrMoises.jpg');
+
+                        }@else if $a == 7{
+                            background-image: url('PrVilma.jpg');
+
+                        }@else if $a == 8{
+                            background-image: url('PbIsaias.jpg');
+
+                        }//Final de '@else if'
+
+
+                        //isaias, vilma
+                    }//Final de '.pr#{$a}'
+
+
+
+                }//Final de '@for'
+
+                .prs{
+
+                    //background-size:contain;
+                    background-size: 104% 104%;
                     background-repeat:no-repeat;
                     background-position: center;
-                }
-                .prs{
 
                     
                     @include a.tamAl(150px, 150px);

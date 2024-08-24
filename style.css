@@ -310,7 +310,7 @@ body {
 }
 .principal main #caixa3 .contCx3 {
   display: grid;
-  grid-template-columns: repeat(3, 33.3%);
+  grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(2, 50%);
   justify-items: center;
   align-items: center;
@@ -322,11 +322,32 @@ body {
 }
 .principal main #caixa3 .contCx3 .cxPrs .pr1 {
   background-image: url("Pr.Marcelo.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+.principal main #caixa3 .contCx3 .cxPrs .pr2 {
+  background-image: url("Pr.Djalma.jpg");
+}
+.principal main #caixa3 .contCx3 .cxPrs .pr3 {
+  background-image: url("PrLaura.jpg");
+}
+.principal main #caixa3 .contCx3 .cxPrs .pr4 {
+  background-image: url("PrKarine.jpg");
+}
+.principal main #caixa3 .contCx3 .cxPrs .pr5 {
+  background-image: url("BpaShirley.jpg");
+}
+.principal main #caixa3 .contCx3 .cxPrs .pr6 {
+  background-image: url("PrMoises.jpg");
+}
+.principal main #caixa3 .contCx3 .cxPrs .pr7 {
+  background-image: url("PrVilma.jpg");
+}
+.principal main #caixa3 .contCx3 .cxPrs .pr8 {
+  background-image: url("PbIsaias.jpg");
 }
 .principal main #caixa3 .contCx3 .cxPrs .prs {
+  background-size: 104% 104%;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 150px;
   height: 150px;
   border: 5px solid white;
@@ -442,7 +463,7 @@ body {
     color: #0D2540;
   }
   .principal main #caixa3 .contCx3 {
-    width: 600%;
+    width: 800%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -543,6 +564,18 @@ body {
     margin-left: -500%;
   }
   .principal main #caixa3 #radioPr6:checked ~ .controleCx3 .btCx3:nth-of-type(6) {
+    background-color: orange;
+  }
+  .principal main #caixa3 #radioPr7:checked ~ .contCx3 {
+    margin-left: -600%;
+  }
+  .principal main #caixa3 #radioPr7:checked ~ .controleCx3 .btCx3:nth-of-type(7) {
+    background-color: orange;
+  }
+  .principal main #caixa3 #radioPr8:checked ~ .contCx3 {
+    margin-left: -700%;
+  }
+  .principal main #caixa3 #radioPr8:checked ~ .controleCx3 .btCx3:nth-of-type(8) {
     background-color: orange;
   }
 }

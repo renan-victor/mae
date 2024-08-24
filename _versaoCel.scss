@@ -197,7 +197,7 @@
                 //Conteiner do Slide
                 .contCx3{
 
-                    width: 600%;
+                    width: 800%;
                     //@include a.bd(blue);
 
                     display:flex;
@@ -302,7 +302,7 @@
                     transition:2s;
                 }
 
-                @for $a from 1 through 6 {
+                @for $a from 1 through 8 {
                     
                     @if $a == 1 {
 
@@ -359,6 +359,28 @@
                         }
 
                     }@else if $a == 6 {
+
+                        #radioPr#{$a}:checked ~ .contCx3{
+                            $aux:$a - 1;
+                            margin-left: -($aux * 100%);
+                        }
+                        #radioPr#{$a}:checked ~ .controleCx3 .btCx3:nth-of-type(#{$a}){
+
+                            background-color: orange;
+                        }
+
+                    }@else if $a == 7 {
+
+                        #radioPr#{$a}:checked ~ .contCx3{
+                            $aux:$a - 1;
+                            margin-left: -($aux * 100%);
+                        }
+                        #radioPr#{$a}:checked ~ .controleCx3 .btCx3:nth-of-type(#{$a}){
+
+                            background-color: orange;
+                        }
+
+                    }@else if $a == 8 {
 
                         #radioPr#{$a}:checked ~ .contCx3{
                             $aux:$a - 1;
