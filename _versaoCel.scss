@@ -1,0 +1,413 @@
+@use 'aux' as a;
+
+//O que for colocado aqui, estará dentro de 'principal'!!
+@mixin vsCel{
+
+    $corAuxCel: #5d5a56;
+    
+    //border:5px solid orange; 
+    
+    //Versão para celular
+    @media only screen and (max-width: 720px){
+        
+        //border:4px solid blue;
+
+        padding:0;
+
+        overflow: hidden;
+
+        width:100%;
+
+
+        .logo{
+            width: 210px;
+            height: 210px;
+
+            margin-top:20px;
+        }
+
+        //Corpo do Site
+        main{
+            //Primeiro coloco uma largura relativa nele.
+            //width:100%;
+
+            width: 100%;
+
+            margin:0px;
+
+            //border:2px solid red;
+
+
+            height: 93%;
+
+            border-radius: 30px 30px 0 0 ;
+
+            //Caixa1
+            .caixa1{
+
+                //O nome 'Ignição'
+                h1{
+                    font-size: 60px;
+
+                    padding-top: 10px;
+
+                    color: a.$corMr; //Era $corAuxCel
+
+
+
+                }
+
+                .tela{
+                    $alturaTela:300px;
+                    height: $alturaTela;
+                    width:100%;
+
+                    overflow:hidden;
+
+                    border-radius:10px;
+
+
+                    .conteiner{
+                        //@include a.bg(red);
+                        height:$alturaTela;
+                    }
+                    .controle{
+                       //@include a.bd(red);
+
+                        justify-content: space-around;
+                        padding: 0 30px 0 30px;
+                        width:100%;
+
+                        position: absolute;
+                        top: 533px;
+                        left: 0px;
+
+                        .btn{
+                            border-radius:0;
+                            width:76px;
+                            height: 5px;
+
+                            //Cancela o border:3px solid orange; que esta no principal.
+                            border-width:0;
+                            background-color: a.$corMr;
+                        }
+
+                    }//Fianl de 'controle'
+
+                    //Botao direção
+                    .btnDires{
+                        height: $alturaTela;
+                        width: 100%;
+                        //@include a.bd(blue);
+                        border-width: 6px;
+
+                        display: flex;
+                        justify-content: space-between;
+
+                        position: absolute;
+                        top:170px;
+
+                        
+                        .setas{
+                            height:100%;
+                            width:55px;
+                            //@include a.bd(orange);
+                            border-width:4px;
+
+                            
+                        }
+
+                        .bLeft{
+                            background-image: url('branca-left-arrow.png');
+                        }
+                        .bRight{
+                            background-image: url('branca-right-arrow.png');
+                        }
+
+                    }//Final de 'btnDres'
+                    
+                }//Final de 'tela'
+
+            }//Final de 'caixa1'
+
+            //Caixa2
+            .caixa2{
+
+                #cultos{
+                    margin-top:-15px;
+                    color: a.$corMr; //Era $corAuxCel
+                }
+                .organiza{
+
+                    .cvs1, .cvs2{
+                        //@include a.bd(red);
+                        //foto e nome
+                        .cont{
+                            margin:0 5px 0 5px;
+
+                            .ft1, .ft2{
+                                @include a.tamAl(120px, 120px);
+
+                                margin:0;
+                            }
+
+                        }
+
+                        //dia e texto
+                        .auxCx2{
+                            //@include a.bd(blue);
+                            width:67%;
+
+                            .palavra1, .palavra2{
+                                @include a.tamAl(100px, 100%);
+
+                                padding:25px;
+
+                            }
+                            .palavra1{
+                                border-radius: 45px 45px 45px 0;
+                            }
+                            .palavra2{
+                                border-radius: 30px 30px 0 30px;
+                            }
+                        }
+
+                        
+                    }
+                }
+            }//Final de 'caixa1'
+
+            //Caixa 3
+            #caixa3{//Tela do slide
+
+                h1{
+                    color: a.$corMr; //Era $corAuxCel(variavel local)
+                }
+
+                display: flex;
+                flex-direction:column;
+                align-items: center;
+
+                width: 100%;
+                //@include a.bd(red);
+
+                overflow:hidden;
+
+                //cont = conteiner
+                //Conteiner do Slide
+                .contCx3{
+
+                    width: 600%;
+                    //@include a.bd(blue);
+
+                    display:flex;
+                    flex-direction: row;
+
+                    justify-content: space-around;
+
+                    //Para desfazer o efeito do align-items: center que usei para centralizar o controle do slide
+                    align-self:start;
+
+                    //Caixa com Foto e nome dos pastores.
+                    .cxPrs{
+                        //@include a.bd(orange);
+
+                        @include a.tamAl(400px, 100%);
+
+                        justify-content: space-around;
+                        align-items:center;
+
+                        //Fotos dos pastores
+                        .prs{
+
+                            @include a.tamAl(230px, 230px);
+
+                            border-radius: 150px;
+                        }
+
+                        h2{
+                            font-size:40px;
+                            color: a.$corAux2;//era chocolate
+                        }
+                    }//Caixa com foto e nome
+
+                }//Final de 'contCx3' / Conteiner!!
+
+                .controleCx3{
+                    z-index: 1;
+
+                    display:flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    //@include a.bd(yellow);
+                    @include a.tamAl(100px, 300px);
+
+                    .btCx3{
+
+                        background-color: a.$corMr;
+                        border-radius:20px;
+
+                        @include a.tamAl(20px, 20px);
+
+                        cursor:pointer;
+
+                        
+                    }
+                }//Cotrole do slide
+
+                .cxDasSetas3{
+
+                    display:flex;
+                    flex-direction: row;
+                    justify-content:space-between;
+
+                    //@include a.bd(purple);
+                    border-width:4px;
+                    @include a.tamAl(510px, 100%);
+                    position:absolute;
+                    bottom:0px;
+
+                    .setaEsquerda, .setaDireita{
+                        @include a.tamAl(100%, 55px);
+
+                        cursor: pointer;
+
+                        //@include a.bd(red);
+
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position:center;
+
+                        opacity:0.9;
+
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+
+                    .setaEsquerda{
+                        background-image: url(branca-left-arrow.png);
+                    }
+                    .setaDireita{
+                        background-image: url(branca-right-arrow.png);
+                    }
+
+                }//Final de '.cxDasSetas3
+                
+                //---------------------------------------------
+                
+                //Slide
+                .contCx3{
+                    transition:2s;
+                }
+
+                @for $a from 1 through 6 {
+                    
+                    @if $a == 1 {
+
+                        #radioPr#{$a}:checked ~ .contCx3{
+
+                            margin-left:  0%;
+                        }
+                        #radioPr#{$a}:checked ~ .controleCx3 .btCx3:nth-of-type(#{$a}){
+
+                            background-color: orange;
+                        }
+
+                    }@else if $a == 2{
+                        #radioPr#{$a}:checked ~ .contCx3{
+                            $aux:$a - 1;
+                            margin-left: -($aux * 100%);
+                        }
+                        #radioPr#{$a}:checked ~ .controleCx3 .btCx3:nth-of-type(#{$a}){
+
+                            background-color: orange;
+                        }
+                        
+                    }@else if $a == 3{
+
+                        #radioPr#{$a}:checked ~ .contCx3{
+                            $aux:$a - 1;
+                            margin-left: -($aux * 100%);
+                        }
+                        #radioPr#{$a}:checked ~ .controleCx3 .btCx3:nth-of-type(#{$a}){
+
+                            background-color: orange;
+                        }
+
+                    }@else if $a == 4 {
+
+                        #radioPr#{$a}:checked ~ .contCx3{
+                            $aux:$a - 1;
+                            margin-left: -($aux * 100%);
+                        }
+                        #radioPr#{$a}:checked ~ .controleCx3 .btCx3:nth-of-type(#{$a}){
+
+                            background-color: orange;
+                        }
+
+                    }@else if $a == 5{
+
+                        #radioPr#{$a}:checked ~ .contCx3{
+                            $aux:$a - 1;
+                            margin-left: -($aux * 100%);
+                        }
+                        #radioPr#{$a}:checked ~ .controleCx3 .btCx3:nth-of-type(#{$a}){
+
+                            background-color: orange;
+                        }
+
+                    }@else if $a == 6 {
+
+                        #radioPr#{$a}:checked ~ .contCx3{
+                            $aux:$a - 1;
+                            margin-left: -($aux * 100%);
+                        }
+                        #radioPr#{$a}:checked ~ .controleCx3 .btCx3:nth-of-type(#{$a}){
+
+                            background-color: orange;
+                        }
+
+                    }//Final de '@else if'
+
+                }//Final de 'for'
+
+            }//Final de '#caixa3'
+        }//Final do main
+        
+        
+    }//Final do '@media' para menores que 720px
+
+
+
+
+
+
+
+    //  !! TAMANHO PARA PC E E TABLET   !!!
+
+
+
+    //@media para qualquer tamanho q não seja Pc nem cel
+    //Qualquer tela entre 720px e 1020px vão ter a largura em porcentagem para ser mais responsivo
+    @media only screen and (max-width: 1020px) and (min-width: 720px){
+        main{
+            width:95vw;
+            
+            .caixa1{
+              
+                //border:2px solid red;
+               
+                width:100%;
+
+                .tela{
+                    width:100%;
+
+                }
+    
+            }//Final de 'caixa1'
+        }//Final de 'main'
+    }//Final de @media para menor que 1020px
+
+}//Final de 'vsCel'

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
+    <title>Document</title>
+</head>
+<body>
+    <div class='principal'> 
+
+        <!--  z-index:1;  -->
+        <div class='logo'></div>
+
+
+        <!-- 
+        z-index:0;
+        Para ele funcionar 'position' tem q ser 'relative'
+        -->
+        <main>
+
+            <section class="caixa1">
+
+                <h1>Ignição!</h1>
+
+                 <!--Tela do slide-->
+                <div class="tela">
+                    <input type='radio' name='radio' id='radio1'></input>
+                    <input type='radio' name='radio' id='radio2'></input>
+                    <input type='radio' name='radio' id='radio3'></input>
+                    <input type='radio' name='radio' id='radio4'></input>
+
+                    <div class="conteiner">
+                        
+
+                        <div class='img1 imgs'></div>
+                        <div class='img2 imgs'></div>
+                        <div class='img3 imgs'></div>
+                        <div class='img4 imgs'></div>
+                    </div>
+
+                    <div class='controle'>
+                        <label for='radio1' class='btn'></label>
+                        <label for='radio2' class='btn'></label>
+                        <label for='radio3' class='btn'></label>
+                        <label for='radio4' class='btn'></label>
+                    </div>
+
+                    <!--Botoes de direção-->
+                    <div class='btnDires'>
+                        <div class='bLeft setas'></div>
+                        <div class='bRight setas'></div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--Cultos-->
+            <section class='caixa2'>
+                <h1 id='cultos'>Cultos</h1>
+
+                <!--Organiza a ideia de conversa-->
+                <div class='organiza'>
+
+                   <div class='cvs1'>
+                        <div class='cont'><!--Cont = conteiner-->
+                            <div class='ft1'></div>
+                            <h2>Pr.Marcelo</h2>
+                        </div>
+                        <div class='auxCx2'>
+                            <h2 id='dia1'>Domingo</h2>
+                            <div class='palavra1'>
+                                <p>Tema: Esperança</p>
+                                
+                                <p>Detalhes: 2 corintios 2:5</p>
+                            </div>
+                        </div>
+
+                   </div>
+
+                   <div class='cvs2'>
+                        <div class='auxCx2'>
+                            <h2 id='dia2'>Quinta-feira</h2>
+                            <div class='palavra2'>
+                                <p>Tema: Esperança</p>
+                                
+                                <p>Detalhes: 2 corintios 2:5</p>
+                            </div>
+                        </div>
+                        <div class='cont'><!--cont = conteiner-->
+                            <div class="ft2"></div>
+                            <h2>Pr.Djalma</h2>
+                        </div>
+                   </div>
+
+                </div>
+            </section>
+
+            <!--Pastores-->
+
+            <!--Tela do slide-->
+            <section id="caixa3">
+                <h1>Pastores</h1>
+
+                <input type="radio" id='radioPr1' name='radioCx3'></input>
+                <input type="radio" id='radioPr2' name='radioCx3'></input>
+                <input type="radio" id='radioPr3' name='radioCx3'></input>
+
+                <input type="radio" id='radioPr4' name='radioCx3'></input>
+                <input type="radio" id='radioPr5' name='radioCx3'></input>
+                <input type="radio" id='radioPr6' name='radioCx3'></input>
+                
+                <!--Conteiner com fotos-->
+                <div class='contCx3'>
+
+                    <div class='cxPrs'>
+                        <div class="pr1 prs"></div>
+                        <h2>Pr. Marcelo</h2>
+                    </div>
+                    <div class='cxPrs'>
+                        <div class="pr1 prs"></div>
+                        <h2>Pr. Marcelo</h2>
+                    </div>
+                    <div class='cxPrs'>
+                        <div class="pr1 prs"></div>
+                        <h2>Pr. Marcelo</h2>
+                    </div>
+
+                    <div class='cxPrs'>
+                        <div class="pr1 prs"></div>
+                        <h2>Pr. Marcelo</h2>
+                    </div>
+                    <div class='cxPrs'>
+                        <div class="pr1 prs"></div>
+                        <h2>Pr. Marcelo</h2>
+                    </div>
+                    <div class='cxPrs'>
+                        <div class="pr1 prs"></div>
+                        <h2>Pr. Marcelo</h2>
+                    </div>
+
+                <!--Final do conteiner com fotos-->
+                </div><!--Final de 'contCx3' / Conteiner!!-->
+
+                <!--Controle do slide-->
+                <div class='controleCx3'>
+                    <label for="radioPr1" class='btCx3'></label>
+                    <label for="radioPr2" class='btCx3'></label>
+                    <label for="radioPr3" class='btCx3'></label>
+
+                    <label for="radioPr4" class='btCx3'></label>
+                    <label for="radioPr5" class='btCx3'></label>
+                    <label for="radioPr6" class='btCx3'></label>
+                </div>
+
+                <!--Caixa de setas do slide responsivo para cel-->
+                <div class='cxDasSetas3'>
+                    <div class='setaEsquerda st'></div>
+                    <div class='setaDireita st'></div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>@Copyright Ministerio Apostolico esperaça</p>
+    </footer>
+    <script>
+        console.log('Agora vou ficar de olho nas resoluções!');
+
+        /*
+        window.addEventListener('resize', function(event){
+            
+            //Para ver as resoluções de tela
+            console.log('Altura = ', event.target.innerHeight);
+            console.log('Largura = ', event.target.innerWidth);
+
+
+
+        });
+        */
+
+
+            let a = 1;
+            let par = false;
+
+            setInterval(()=>{
+
+                Passa();
+                a++;
+            }, 4000);
+
+            function Passa(){
+
+                console.log('entrou a = '+ a);
+                
+
+                if(a > 4){
+                    a = 1;
+                }else if(a == 0){
+                    a = 4;
+                }
+
+                
+
+                    document.getElementById('radio'+a).checked = true;
+                    //if(a==1){a=5;}
+
+                    console.log('foi a = ' + a);
+     
+                
+            }//Final de 'Passa'
+
+            //getElementsByClassName retorna uma lista de elementos da classe
+            setas = document.getElementsByClassName('setas');
+
+            console.log(setas[0]);
+
+            //Ouve o evento na seta esquerda
+            setas[0].addEventListener('click', (evento)=>{
+
+                console.log('botao esquerdo');
+                
+                a--;
+                Passa();
+
+                //Interrompe a propagação do evento.
+                evento.stopPropagation();
+            });
+
+            //Ouve o evento na seta Direita
+            setas[1].addEventListener('click', (evento)=>{
+
+                console.log('Botao direito!!');
+
+                a++;
+                Passa();
+
+                evento.stopPropagation();
+            });
+
+            //-----------------------------------------
+
+            //Slide do responsivo para cel
+
+            let b = 1;
+
+            setInterval(function(){
+
+                Passa2();
+                b--;
+
+            }, 5000);
+
+            function Passa2(){
+
+                if(b > 6){
+                    b = 1;
+                }else if(b == 0){
+                    b = 6;
+                }
+
+                console.log('Pastor = ' + b);
+                document.getElementById(`radioPr${b}`).checked = true;
+
+                
+
+            }//Final 'Passa2'
+
+            //st = setas (mas essas são dos pastores)
+            st = document.getElementsByClassName('st');
+
+            //Ouve o esquerdo
+            st[0].addEventListener('click', function(event){
+
+                console.log('B esquerdo dos Pastores');
+
+                b--;
+                Passa2();
+                event.stopPropagation();
+
+            });
+
+            //Ouve o direito
+            st[1].addEventListener('click', function(){
+
+                console.log('B direito dos Pastores');
+
+                b++;
+                Passa2();
+                event.stopPropagation();
+            });
+
+
+
+
+
+        
+        
+        
+    </script>
+</body>
+</html>

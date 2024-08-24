@@ -1,0 +1,252 @@
+
+@use 'aux' as a;
+
+
+@mixin modulo1{
+
+    .caixa1{
+        
+        padding-top: 80px;
+        
+        height: 600px;
+        //@include a.bd(blue);
+
+        h1{
+
+            display:flex;
+            justify-content:center;
+
+            font-family:Tahoma;
+            font-size:80px;
+        // border:1px solid black;
+            
+            color: a.$corMr; //Era $corAux
+
+            padding-bottom:9px;
+
+            
+
+        }
+        
+
+        .tela{
+
+            $alturaTl:400px;
+            //Vai ter 100% do corpo todo do site = 800px
+            width:800px;//ou 800px
+            height: $alturaTl;//ou 400px
+
+            margin:0 auto 0;
+
+            overflow: hidden;
+
+            border-radius:20px;
+            @include a.bd(orange);
+            border-width: 2.5px;
+
+            @include a.bg(a.$corAux);
+
+            input{display:none;}
+
+
+
+            .conteiner{
+                //margin-left:-100%;
+
+                transition:2s;
+                
+                display:flex;
+                flex-direction:row;
+
+                
+                //@include a.bd(green);
+
+                width: 400%;
+                height: 400px;
+
+                .imgs{
+                    @include a.bd(grey);
+
+                    //background-color:red;
+
+                    background-repeat:no-repeat;
+                    background-position:center;
+                    background-size: cover;
+
+                    width: 33.3%;
+                    height: 100%;
+                }
+
+                //though -> inclui o valor final
+                @for $i from 1 through 4 {
+
+                    @if $i == 1{
+                        .img#{$i}{
+                            
+                            background-image: url('ignisao4.jpg');
+                            border: 0px solid yellow;
+                            
+                            
+                        }
+                    } @else if $i == 2 {
+                        .img#{$i}{
+
+
+                            background-image: url('ignisao3.jpg');
+                            border: 0px solid yellow;
+                            
+
+
+                        }
+                    } @else if $i == 3 {
+                        .img#{$i}{
+                        background-image: url('ignisao2.jpg');
+                        border: 0px solid yellow;
+
+                        
+                        }
+                    }@else if $i == 4{
+
+                        .img#{$i}{
+                            background-image: url('ignisao.jpg');
+                            background-position: 0 30%;
+                        }
+                    
+                    }@else{
+                        @error 'Deu ruim'; 
+                    }
+                }//Fim do 'for'
+
+                
+
+
+                
+
+            }//Final de '.conteiner'
+
+
+            .controle{
+
+                position: relative;
+                z-index: 1;
+                margin: 0 auto 0;
+                margin-top:-60px;
+
+                display:flex;
+                flex-direction:row;
+                justify-content: space-between;
+                align-items: center;
+
+                width:200px;
+                height:50px;
+                //border:1px solid black;
+        
+                .btn{
+                    
+                    transition:0.5s;
+
+                    cursor: pointer;
+                    width:15px;
+                    height:15px;
+
+                    border-radius:20px;
+                    
+                    border:2px solid orange;
+                    
+                    &:hover{
+                        background:orange;//era orange
+                    }
+                }
+
+
+        
+            }//Final de 'controle'
+
+
+            //Botao direção
+            .btnDires{
+
+                height: $alturaTl;
+                width: 100%;
+
+                //@include a.bd(blue);
+
+                border-width: 1px;
+
+                display: flex;
+                justify-content: space-between;
+
+                position: absolute;
+                top:165px;
+                left: 0px;
+
+                
+                .setas{
+                    height:100%;
+                    width:80px;
+                    //@include a.bd(orange);
+
+                    border-width:4px;
+
+                    background-position:center;
+                    background-repeat: no-repeat;
+                    background-size: 40px 40px;
+
+                    opacity: 0.9;
+
+                    cursor: pointer;
+
+                    &:hover{
+                        opacity: 1;
+                    }
+
+                    
+                }
+
+                
+                
+                
+                .bLeft{
+                    background-image: url('branca-left-arrow.png');
+
+                }
+                .bRight{
+                    background-image: url('branca-right-arrow.png');
+                }
+            }//Final de '.btnDires'
+            
+            #radio1:checked ~ .conteiner{
+                margin-left:0;
+            }
+            #radio1:checked ~ .controle .btn:nth-of-type(1){
+                background-color: orange;
+                opacity: 1;
+            }
+
+            #radio2:checked ~ .conteiner{
+                margin-left: -100%;
+            }
+            #radio2:checked ~ .controle .btn:nth-of-type(2){
+                background-color: orange;
+            }
+
+            #radio3:checked ~ .conteiner{
+                margin-left:-200%;
+            }
+            #radio3:checked ~ .controle .btn:nth-of-type(3){
+                background-color: orange;
+            }
+
+            #radio4:checked ~ .conteiner{
+                margin-left:-300%;
+            }
+            #radio4:checked ~ .controle .btn:nth-of-type(4){
+                background-color: orange;
+            }
+            
+
+        }//Final de '.tela'*/
+
+    }//Final de 'caixa1'
+
+}//Final de 'modulo1'

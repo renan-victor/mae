@@ -1,0 +1,571 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #489c5f;
+  border-radius: 50px;
+}
+
+body {
+  background-image: linear-gradient(to top, rgba(192, 218, 139, 0.5) 30%, white);
+}
+
+.principal {
+  height: 2000px;
+}
+.principal .logo {
+  z-index: 1;
+  position: relative;
+  display: block;
+  border-radius: 140px;
+  border-color: white;
+  border-width: 10px;
+  border-style: solid;
+  background-image: url("mae3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 230px;
+  height: 230px;
+  margin: 0 auto 0;
+  margin-bottom: -70px;
+}
+.principal main {
+  z-index: 0;
+  position: relative;
+  margin: 0 auto 0;
+  background-color: #c0da8b;
+  border-radius: 55px 55px 0 0;
+  width: 1000px;
+  height: 92%;
+}
+.principal main .caixa1 {
+  padding-top: 80px;
+  height: 600px;
+}
+.principal main .caixa1 h1 {
+  display: flex;
+  justify-content: center;
+  font-family: Tahoma;
+  font-size: 80px;
+  color: #0D2540;
+  padding-bottom: 9px;
+}
+.principal main .caixa1 .tela {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto 0;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid orange;
+  border-width: 2.5px;
+  background-color: #272727;
+}
+.principal main .caixa1 .tela input {
+  display: none;
+}
+.principal main .caixa1 .tela .conteiner {
+  transition: 2s;
+  display: flex;
+  flex-direction: row;
+  width: 400%;
+  height: 400px;
+}
+.principal main .caixa1 .tela .conteiner .imgs {
+  border: 1px solid grey;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 33.3%;
+  height: 100%;
+}
+.principal main .caixa1 .tela .conteiner .img1 {
+  background-image: url("ignisao4.jpg");
+  border: 0px solid yellow;
+}
+.principal main .caixa1 .tela .conteiner .img2 {
+  background-image: url("ignisao3.jpg");
+  border: 0px solid yellow;
+}
+.principal main .caixa1 .tela .conteiner .img3 {
+  background-image: url("ignisao2.jpg");
+  border: 0px solid yellow;
+}
+.principal main .caixa1 .tela .conteiner .img4 {
+  background-image: url("ignisao.jpg");
+  background-position: 0 30%;
+}
+.principal main .caixa1 .tela .controle {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto 0;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+}
+.principal main .caixa1 .tela .controle .btn {
+  transition: 0.5s;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+  border: 2px solid orange;
+}
+.principal main .caixa1 .tela .controle .btn:hover {
+  background: orange;
+}
+.principal main .caixa1 .tela .btnDires {
+  height: 400px;
+  width: 100%;
+  border-width: 1px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 165px;
+  left: 0px;
+}
+.principal main .caixa1 .tela .btnDires .setas {
+  height: 100%;
+  width: 80px;
+  border-width: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.principal main .caixa1 .tela .btnDires .setas:hover {
+  opacity: 1;
+}
+.principal main .caixa1 .tela .btnDires .bLeft {
+  background-image: url("branca-left-arrow.png");
+}
+.principal main .caixa1 .tela .btnDires .bRight {
+  background-image: url("branca-right-arrow.png");
+}
+.principal main .caixa1 .tela #radio1:checked ~ .conteiner {
+  margin-left: 0;
+}
+.principal main .caixa1 .tela #radio1:checked ~ .controle .btn:nth-of-type(1) {
+  background-color: orange;
+  opacity: 1;
+}
+.principal main .caixa1 .tela #radio2:checked ~ .conteiner {
+  margin-left: -100%;
+}
+.principal main .caixa1 .tela #radio2:checked ~ .controle .btn:nth-of-type(2) {
+  background-color: orange;
+}
+.principal main .caixa1 .tela #radio3:checked ~ .conteiner {
+  margin-left: -200%;
+}
+.principal main .caixa1 .tela #radio3:checked ~ .controle .btn:nth-of-type(3) {
+  background-color: orange;
+}
+.principal main .caixa1 .tela #radio4:checked ~ .conteiner {
+  margin-left: -300%;
+}
+.principal main .caixa1 .tela #radio4:checked ~ .controle .btn:nth-of-type(4) {
+  background-color: orange;
+}
+.principal main .caixa2 {
+  width: 100%;
+  height: 600px;
+  border-width: 4px;
+}
+.principal main .caixa2 #cultos {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-family: Tahoma;
+  color: #0D2540;
+}
+.principal main .caixa2 .organiza {
+  display: grid;
+  grid-template-rows: repeat(2, 263px);
+  height: 88%;
+}
+.principal main .caixa2 .organiza .cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.principal main .caixa2 .organiza .cont:nth-of-type(1) {
+  margin-left: 50px;
+}
+.principal main .caixa2 .organiza .cont:nth-of-type(2) {
+  margin-right: 50px;
+}
+.principal main .caixa2 .organiza .cont h2 {
+  font-family: Tahoma;
+  color: #235FA4;
+}
+.principal main .caixa2 .organiza .cvs1, .principal main .caixa2 .organiza .cvs2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.principal main .caixa2 .organiza .cvs1 .auxCx2, .principal main .caixa2 .organiza .cvs2 .auxCx2 {
+  display: flex;
+  flex-direction: column;
+}
+.principal main .caixa2 .organiza .cvs1 .auxCx2 h2, .principal main .caixa2 .organiza .cvs2 .auxCx2 h2 {
+  font-family: Tahoma;
+  font-style: italic;
+  color: chocolate;
+  margin-bottom: 5px;
+}
+.principal main .caixa2 .organiza .cvs1 .auxCx2 #dia1, .principal main .caixa2 .organiza .cvs2 .auxCx2 #dia1 {
+  align-self: flex-start;
+  padding-left: 45px;
+}
+.principal main .caixa2 .organiza .cvs1 .auxCx2 #dia2, .principal main .caixa2 .organiza .cvs2 .auxCx2 #dia2 {
+  align-self: end;
+  padding-right: 45px;
+}
+.principal main .caixa2 .organiza .cvs1 {
+  justify-content: flex-start;
+}
+.principal main .caixa2 .organiza .cvs2 {
+  justify-content: flex-end;
+}
+.principal main .caixa2 .organiza .ft1, .principal main .caixa2 .organiza .ft2 {
+  border: 5px solid white;
+  margin: 0 15px 5px 15px;
+  width: 150px;
+  height: 150px;
+  background-color: #272727;
+  border-radius: 100px;
+  border-width: 4px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.principal main .caixa2 .organiza .ft1 {
+  background-image: url("Pr.Marcelo.jpg");
+}
+.principal main .caixa2 .organiza .ft2 {
+  background-image: url("Pr.Djalma.jpg");
+  background-size: 110% 110%;
+}
+.principal main .caixa2 .organiza .palavra1, .principal main .caixa2 .organiza .palavra2 {
+  color: #272727;
+  width: 430px;
+  height: 130px;
+  margin-bottom: 40px;
+  background-color: rgb(238, 236, 236);
+  padding: 30px;
+}
+.principal main .caixa2 .organiza .palavra1 p, .principal main .caixa2 .organiza .palavra2 p {
+  font-family: arial;
+  font-weight: bold;
+  font-size: 18px;
+  color: #272727;
+}
+.principal main .caixa2 .organiza .palavra1 {
+  border-radius: 45px 45px 45px 0px;
+  box-shadow: -2px 3px 7px gray;
+}
+.principal main .caixa2 .organiza .palavra2 {
+  box-shadow: 2px 3px 5px gray;
+  border-radius: 45px 45px 0px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.principal main .caixa2 .organiza .palavra2 p:nth-of-type(1) {
+  text-align: right;
+}
+.principal main #caixa3 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 100%;
+  height: 550px;
+}
+.principal main #caixa3 h1 {
+  display: flex;
+  justify-content: center;
+  font-family: Tahoma;
+  font-size: 60px;
+  color: #0D2540;
+  margin-bottom: 20px;
+}
+.principal main #caixa3 .contCx3 {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: repeat(2, 50%);
+  justify-items: center;
+  align-items: center;
+  height: 80%;
+}
+.principal main #caixa3 .contCx3 .cxPrs {
+  display: flex;
+  flex-direction: column;
+}
+.principal main #caixa3 .contCx3 .cxPrs .pr1 {
+  background-image: url("Pr.Marcelo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.principal main #caixa3 .contCx3 .cxPrs .prs {
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+  border-radius: 100px;
+}
+.principal main #caixa3 .contCx3 .cxPrs h2 {
+  font-family: Tahoma;
+  color: #0D2540;
+}
+.principal main #caixa3 input {
+  display: none;
+}
+@media only screen and (max-width: 720px) {
+  .principal {
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  .principal .logo {
+    width: 210px;
+    height: 210px;
+    margin-top: 20px;
+  }
+  .principal main {
+    width: 100%;
+    margin: 0px;
+    height: 93%;
+    border-radius: 30px 30px 0 0;
+  }
+  .principal main .caixa1 h1 {
+    font-size: 60px;
+    padding-top: 10px;
+    color: #0D2540;
+  }
+  .principal main .caixa1 .tela {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .principal main .caixa1 .tela .conteiner {
+    height: 300px;
+  }
+  .principal main .caixa1 .tela .controle {
+    justify-content: space-around;
+    padding: 0 30px 0 30px;
+    width: 100%;
+    position: absolute;
+    top: 533px;
+    left: 0px;
+  }
+  .principal main .caixa1 .tela .controle .btn {
+    border-radius: 0;
+    width: 76px;
+    height: 5px;
+    border-width: 0;
+    background-color: #0D2540;
+  }
+  .principal main .caixa1 .tela .btnDires {
+    height: 300px;
+    width: 100%;
+    border-width: 6px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 170px;
+  }
+  .principal main .caixa1 .tela .btnDires .setas {
+    height: 100%;
+    width: 55px;
+    border-width: 4px;
+  }
+  .principal main .caixa1 .tela .btnDires .bLeft {
+    background-image: url("branca-left-arrow.png");
+  }
+  .principal main .caixa1 .tela .btnDires .bRight {
+    background-image: url("branca-right-arrow.png");
+  }
+  .principal main .caixa2 #cultos {
+    margin-top: -15px;
+    color: #0D2540;
+  }
+  .principal main .caixa2 .organiza .cvs1 .cont, .principal main .caixa2 .organiza .cvs2 .cont {
+    margin: 0 5px 0 5px;
+  }
+  .principal main .caixa2 .organiza .cvs1 .cont .ft1, .principal main .caixa2 .organiza .cvs1 .cont .ft2, .principal main .caixa2 .organiza .cvs2 .cont .ft1, .principal main .caixa2 .organiza .cvs2 .cont .ft2 {
+    width: 120px;
+    height: 120px;
+    margin: 0;
+  }
+  .principal main .caixa2 .organiza .cvs1 .auxCx2, .principal main .caixa2 .organiza .cvs2 .auxCx2 {
+    width: 67%;
+  }
+  .principal main .caixa2 .organiza .cvs1 .auxCx2 .palavra1, .principal main .caixa2 .organiza .cvs1 .auxCx2 .palavra2, .principal main .caixa2 .organiza .cvs2 .auxCx2 .palavra1, .principal main .caixa2 .organiza .cvs2 .auxCx2 .palavra2 {
+    width: 100%;
+    height: 100px;
+    padding: 25px;
+  }
+  .principal main .caixa2 .organiza .cvs1 .auxCx2 .palavra1, .principal main .caixa2 .organiza .cvs2 .auxCx2 .palavra1 {
+    border-radius: 45px 45px 45px 0;
+  }
+  .principal main .caixa2 .organiza .cvs1 .auxCx2 .palavra2, .principal main .caixa2 .organiza .cvs2 .auxCx2 .palavra2 {
+    border-radius: 30px 30px 0 30px;
+  }
+  .principal main #caixa3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  .principal main #caixa3 h1 {
+    color: #0D2540;
+  }
+  .principal main #caixa3 .contCx3 {
+    width: 600%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: start;
+  }
+  .principal main #caixa3 .contCx3 .cxPrs {
+    width: 100%;
+    height: 400px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .principal main #caixa3 .contCx3 .cxPrs .prs {
+    width: 230px;
+    height: 230px;
+    border-radius: 150px;
+  }
+  .principal main #caixa3 .contCx3 .cxPrs h2 {
+    font-size: 40px;
+    color: #235FA4;
+  }
+  .principal main #caixa3 .controleCx3 {
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+  }
+  .principal main #caixa3 .controleCx3 .btCx3 {
+    background-color: #0D2540;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .principal main #caixa3 .cxDasSetas3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-width: 4px;
+    width: 100%;
+    height: 510px;
+    position: absolute;
+    bottom: 0px;
+  }
+  .principal main #caixa3 .cxDasSetas3 .setaEsquerda, .principal main #caixa3 .cxDasSetas3 .setaDireita {
+    width: 55px;
+    height: 100%;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+  }
+  .principal main #caixa3 .cxDasSetas3 .setaEsquerda:hover, .principal main #caixa3 .cxDasSetas3 .setaDireita:hover {
+    opacity: 1;
+  }
+  .principal main #caixa3 .cxDasSetas3 .setaEsquerda {
+    background-image: url(branca-left-arrow.png);
+  }
+  .principal main #caixa3 .cxDasSetas3 .setaDireita {
+    background-image: url(branca-right-arrow.png);
+  }
+  .principal main #caixa3 .contCx3 {
+    transition: 2s;
+  }
+  .principal main #caixa3 #radioPr1:checked ~ .contCx3 {
+    margin-left: 0%;
+  }
+  .principal main #caixa3 #radioPr1:checked ~ .controleCx3 .btCx3:nth-of-type(1) {
+    background-color: orange;
+  }
+  .principal main #caixa3 #radioPr2:checked ~ .contCx3 {
+    margin-left: -100%;
+  }
+  .principal main #caixa3 #radioPr2:checked ~ .controleCx3 .btCx3:nth-of-type(2) {
+    background-color: orange;
+  }
+  .principal main #caixa3 #radioPr3:checked ~ .contCx3 {
+    margin-left: -200%;
+  }
+  .principal main #caixa3 #radioPr3:checked ~ .controleCx3 .btCx3:nth-of-type(3) {
+    background-color: orange;
+  }
+  .principal main #caixa3 #radioPr4:checked ~ .contCx3 {
+    margin-left: -300%;
+  }
+  .principal main #caixa3 #radioPr4:checked ~ .controleCx3 .btCx3:nth-of-type(4) {
+    background-color: orange;
+  }
+  .principal main #caixa3 #radioPr5:checked ~ .contCx3 {
+    margin-left: -400%;
+  }
+  .principal main #caixa3 #radioPr5:checked ~ .controleCx3 .btCx3:nth-of-type(5) {
+    background-color: orange;
+  }
+  .principal main #caixa3 #radioPr6:checked ~ .contCx3 {
+    margin-left: -500%;
+  }
+  .principal main #caixa3 #radioPr6:checked ~ .controleCx3 .btCx3:nth-of-type(6) {
+    background-color: orange;
+  }
+}
+@media only screen and (max-width: 1020px) and (min-width: 720px) {
+  .principal main {
+    width: 95vw;
+  }
+  .principal main .caixa1 {
+    width: 100%;
+  }
+  .principal main .caixa1 .tela {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #0D2540;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  margin-top: 0px;
+}
+footer p {
+  color: white;
+  margin: 20px;
+}/*# sourceMappingURL=style.css.map */

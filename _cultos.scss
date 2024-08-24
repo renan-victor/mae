@@ -1,0 +1,180 @@
+
+@use 'aux' as a;
+
+@mixin modulo2{
+
+    .caixa2{
+
+
+        width: 100%;
+        height:600px;
+
+        //@include a.bd(black);
+        border-width:4px;
+
+        #cultos{
+            
+            margin-top: 50px;
+            margin-bottom:40px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 60px;
+            font-family: Tahoma;
+            color: a.$corMr; //era $corAux
+
+        }
+
+        .organiza{
+
+            //@include a.bd(chocolate);
+            display: grid;
+            grid-template-rows:  repeat(2, 263px);
+
+            height: calc(100% - 12%);
+
+            .cont{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+            .cont:nth-of-type(1){
+                margin-left: 50px;
+            }
+            .cont:nth-of-type(2){
+                margin-right: 50px;
+            }
+
+            //Nome dos partores de Quinta e Domingo
+            .cont h2{
+                font-family: Tahoma;
+                color: a.$corAux2;
+            }
+
+            .cvs1, .cvs2{
+                //@include a.bd(blue);
+
+                width: 100%;
+                height: 100%;
+
+                display:flex;
+                align-items: center;
+
+
+                .auxCx2{
+                    display:flex;
+                    flex-direction: column;
+
+                    h2{
+                        font-family:Tahoma;
+                        font-style:italic;
+                        color: chocolate;//era chocolate
+                        margin-bottom: 5px;
+                    }
+                    #dia1{
+                        align-self: flex-start;
+                        padding-left: 45px;
+                    }
+                    #dia2{
+                        align-self: end;
+                        padding-right:45px;
+                    }
+                }
+                
+
+            }//Final de '.cvs1, cvs2'
+
+            .cvs1{
+                justify-content:flex-start;
+            }
+            .cvs2{
+                justify-content:flex-end;
+            }
+            
+            //Fotos dos pastores
+            .ft1, .ft2{
+                
+                border: 5px solid white;
+
+                margin: 0 15px 5px 15px;
+                width: 150px;
+                height: 150px;
+
+                //@include a.bd(chocolate);
+                @include a.bg(a.$corAux);
+
+                border-radius: 100px;
+                border-width: 4px;
+
+                background-size:contain;
+                background-position:center;
+                background-repeat:no-repeat;
+            }
+            .ft1{
+                background-image:url('Pr.Marcelo.jpg');
+            }
+            .ft2{
+                background-image:url('Pr.Djalma.jpg');
+                background-size: 110% 110%;
+            }
+            
+
+           
+            
+            .palavra1, .palavra2{
+
+                
+
+                color: a.$corAux;
+
+
+                @include a.tamAl(130px, 430px);
+                //@include a.bd(red);
+
+                margin-bottom: 40px;
+
+                background-color: rgb(238, 236, 236);
+
+                padding: 30px;
+
+                p{
+                    font-family: arial;
+                    font-weight:bold;
+                    font-size:18px;
+                    color:a.$corAux;
+                }
+
+            }
+
+            .palavra1{
+
+                border-radius: 45px 45px 45px 0px;
+
+                //sombra: eixo x , eixo y,  espansão e cor
+                box-shadow: -2px 3px 7px gray;
+            }
+            .palavra2{
+
+                //sombra: x y espansão e cor
+                box-shadow: 2px 3px 5px gray;
+
+                border-radius: 45px 45px 0px 45px;
+                
+                display:flex;
+                flex-direction:column;
+                align-items: end;
+
+                p:nth-of-type(1){
+                    text-align: right;
+                }
+
+            }
+
+
+        
+            
+        }//Final de 'organiza'
+    }//Final de 'caixa2'
+}//Final de 'modulo2'.

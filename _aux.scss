@@ -1,0 +1,22 @@
+$corMain: #C0DA8B; //Era #acffc2
+$corFooter:#0b2e14;
+$corCxDialogo: #489c5f;//era #489c5f
+$corMae:coral;//era #58c074
+$corAux: #272727;
+$corMr: #0D2540; //era brown
+$corAux2: #235FA4;
+
+@mixin bd($cor){
+
+    border:1px solid $cor;
+}
+
+@mixin bg($cor){
+    background-color: $cor;
+}
+
+@mixin tamAl($altura, $largura){
+
+    width: $largura;
+    height: $altura;
+}

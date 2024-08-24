@@ -1,0 +1,84 @@
+@use 'aux' as a;
+
+@mixin modulo3{
+
+    #caixa3{
+        
+        //@include a.bd(red);
+
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 50px;
+
+        @include a.tamAl(550px, 100%);
+
+        h1{
+            display:flex;
+            justify-content: center;
+
+            font-family: Tahoma;
+            font-size: 60px;
+
+            color: a.$corMr; //Era $corAux
+
+            margin-bottom:20px;
+        }
+
+        
+        .contCx3{
+
+            display:grid;
+            grid-template-columns: repeat(3, 33.3%);
+            grid-template-rows: repeat(2, 50%);
+
+            justify-items: center;
+            align-items: center;
+
+            
+
+            //@include a.bd(blue);
+
+            height: 80%;
+
+            .cxPrs{
+                display: flex;
+                flex-direction: column;
+
+                .pr1{
+                    background-image: url('Pr.Marcelo.jpg');
+                    
+                    background-size:contain;
+                    background-repeat:no-repeat;
+                    background-position: center;
+                }
+                .prs{
+
+                    
+                    @include a.tamAl(150px, 150px);
+                    //@include a.bg(a.$corAux);
+    
+                    //@include a.bd(white);
+                    border: 5px solid white;
+
+                    border-radius: 100px;
+    
+                }
+                h2{
+                    font-family:Tahoma;
+                    color: a.$corMr;//era brown
+                }
+            }
+            
+
+        }//Final de 'contCx3'
+
+        //Slide
+
+        //Esconde os inputes
+        input{display:none;}
+
+
+    }//Final de '#caixa3'
+
+}//Final de 'modulo3'
