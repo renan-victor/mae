@@ -389,6 +389,7 @@ body {
 .principal main #caixa3 .contCx3 .cxPrs {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .principal main #caixa3 .contCx3 .cxPrs .pr1 {
   background-image: url("Pr.Marcelo.jpg");
@@ -424,8 +425,8 @@ body {
   border-radius: 100px;
 }
 .principal main #caixa3 .contCx3 .cxPrs h2 {
-  font-family: Tahoma;
-  color: #0D2540;
+  font-family: arial;
+  color: #235FA4;
 }
 .principal main #caixa3 input {
   display: none;
@@ -467,7 +468,24 @@ body {
     height: 300px;
     width: 100%;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 0px;
+    border-width: 0;
+    border-top-width: 3px;
+    border-bottom-width: 4px;
+    border-color: white;
+  }
+  .principal main .caixa1 .tela #radio1:checked ~ .controle .btn:nth-of-type(1) {
+    background-color: #2F8BF4;
+    opacity: 1;
+  }
+  .principal main .caixa1 .tela #radio2:checked ~ .controle .btn:nth-of-type(2) {
+    background-color: #2F8BF4;
+  }
+  .principal main .caixa1 .tela #radio3:checked ~ .controle .btn:nth-of-type(3) {
+    background-color: #2F8BF4;
+  }
+  .principal main .caixa1 .tela #radio4:checked ~ .controle .btn:nth-of-type(4) {
+    background-color: #2F8BF4;
   }
   .principal main .caixa1 .tela .conteiner {
     height: 300px;
@@ -487,6 +505,9 @@ body {
     border-width: 0;
     background-color: #0D2540;
   }
+  .principal main .caixa1 .tela .controle .btn .btn:hover {
+    background-color: #235FA4;
+  }
   .principal main .caixa1 .tela .btnDires {
     height: 300px;
     width: 100%;
@@ -503,9 +524,17 @@ body {
   }
   .principal main .caixa1 .tela .btnDires .bLeft {
     background-image: url("branca-left-arrow.png");
+    opacity: 0.5;
+  }
+  .principal main .caixa1 .tela .btnDires .bLeft:hover {
+    opacity: 1;
   }
   .principal main .caixa1 .tela .btnDires .bRight {
     background-image: url("branca-right-arrow.png");
+    opacity: 0.5;
+  }
+  .principal main .caixa1 .tela .btnDires .bRight:hover {
+    opacity: 1;
   }
   .principal main .caixa2 #cultos {
     margin-top: 40px;
@@ -569,15 +598,15 @@ body {
     z-index: 1;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
     width: 300px;
     height: 100px;
   }
   .principal main #caixa3 .controleCx3 .btCx3 {
     background-color: #0D2540;
     border-radius: 20px;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     cursor: pointer;
   }
   .principal main #caixa3 .cxDasSetas3 {
@@ -615,49 +644,49 @@ body {
     margin-left: 0%;
   }
   .principal main #caixa3 #radioPr1:checked ~ .controleCx3 .btCx3:nth-of-type(1) {
-    background-color: orange;
+    background-color: #07cf00;
   }
   .principal main #caixa3 #radioPr2:checked ~ .contCx3 {
     margin-left: -100%;
   }
   .principal main #caixa3 #radioPr2:checked ~ .controleCx3 .btCx3:nth-of-type(2) {
-    background-color: orange;
+    background-color: #07cf00;
   }
   .principal main #caixa3 #radioPr3:checked ~ .contCx3 {
     margin-left: -200%;
   }
   .principal main #caixa3 #radioPr3:checked ~ .controleCx3 .btCx3:nth-of-type(3) {
-    background-color: orange;
+    background-color: #07cf00;
   }
   .principal main #caixa3 #radioPr4:checked ~ .contCx3 {
     margin-left: -300%;
   }
   .principal main #caixa3 #radioPr4:checked ~ .controleCx3 .btCx3:nth-of-type(4) {
-    background-color: orange;
+    background-color: #07cf00;
   }
   .principal main #caixa3 #radioPr5:checked ~ .contCx3 {
     margin-left: -400%;
   }
   .principal main #caixa3 #radioPr5:checked ~ .controleCx3 .btCx3:nth-of-type(5) {
-    background-color: orange;
+    background-color: #07cf00;
   }
   .principal main #caixa3 #radioPr6:checked ~ .contCx3 {
     margin-left: -500%;
   }
   .principal main #caixa3 #radioPr6:checked ~ .controleCx3 .btCx3:nth-of-type(6) {
-    background-color: orange;
+    background-color: #07cf00;
   }
   .principal main #caixa3 #radioPr7:checked ~ .contCx3 {
     margin-left: -600%;
   }
   .principal main #caixa3 #radioPr7:checked ~ .controleCx3 .btCx3:nth-of-type(7) {
-    background-color: orange;
+    background-color: #07cf00;
   }
   .principal main #caixa3 #radioPr8:checked ~ .contCx3 {
     margin-left: -700%;
   }
   .principal main #caixa3 #radioPr8:checked ~ .controleCx3 .btCx3:nth-of-type(8) {
-    background-color: orange;
+    background-color: #07cf00;
   }
 }
 @media only screen and (max-width: 1020px) and (min-width: 720px) {
@@ -682,4 +711,5 @@ footer {
 footer p {
   color: white;
   margin: 20px;
+  font-family: arial;
 }/*# sourceMappingURL=style.css.map */

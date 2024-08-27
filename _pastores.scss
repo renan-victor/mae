@@ -44,6 +44,7 @@
             .cxPrs{
                 display: flex;
                 flex-direction: column;
+                align-items:center;
 
                
 
@@ -103,8 +104,8 @@
     
                 }
                 h2{
-                    font-family:Tahoma;
-                    color: a.$corMr;//era brown
+                    font-family:arial;
+                    color: a.$corAux2;//era brown
                 }
             }
             
