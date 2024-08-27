@@ -1,0 +1,134 @@
+
+@use 'aux' as a;
+
+/*
+    Anotação!!
+
+    *O 'main' sem borda, está descendo jundo com o margin de 'caixa0', não sei porque.
+*/
+@mixin Promessa {
+
+    .caixa0{
+        //@include a.bd(blue);
+
+        width:100%;
+        height:340px;
+
+        //RESOLVER ISSO DEPOIS!!
+        padding-top:80px;
+        margin-bottom:20px;
+
+        display:flex;
+        justify-content: center;
+        align-items:center;
+
+        .conteiner-cx0{
+
+            //@include a.bd(red);
+
+            position:relative;
+
+            width: 95%;
+            height: 90%;
+
+            border-radius: 40px;
+
+            overflow: hidden;
+
+         
+
+            //@include a.bg(rgba(a.$corAux2, 0.6));
+
+            display:flex;
+            flex-direction: column;
+
+            &::before{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+
+                width:100%;
+                height:100%;
+
+                background-image: url(origame.jpg);
+
+                background-size:cover;
+                background-position:0% 10%;
+
+                opacity: 0.5;
+
+                z-index:-1;
+            }
+
+            .palavra-cx0{
+                //@include a.bd(red);
+
+                height:70%;
+
+                display:flex;
+                flex-direction:column;
+
+                font-family: arial;
+                font-size: 23px;
+                
+                color: a.$corMr;
+
+
+                .mensagem-cx0{
+
+
+                    margin:30px 25px 0 25px;
+                    text-align:center;
+                }
+
+                .livro-cx0{
+                    align-self:center;
+                    margin-right:50px;
+
+                    font-weight:bold;
+                    
+                    
+
+                }
+            }//Final de 'palavra-cx0'
+            
+            .botoes-cx0{
+
+                //Invadi um pouco o conteiner de cima
+                margin-top:-10px;
+
+                //@include a.bd(red);
+                align-self:end;
+
+                height:30%;
+                .bt-cx0{
+
+                    transition-duration: 1s;
+                    
+                    //@include a.bg(a.$corAux2);
+
+                    @include a.tamAl(60px, 60px);
+
+                    margin-right:30px;
+
+                    border-radius:100px;
+
+                    margin-bottom:5px;
+
+                    background-image:url(reload2.png);
+                    background-position:center;
+                    background-size:contain;
+                    background-repeat:no-repeat;
+
+                    cursor:pointer;
+                }
+            }
+
+
+        }//Final de 'conteiner-cx0'
+
+
+    }//Final de 'caixa0'.
+
+}//Final de promessas.

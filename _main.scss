@@ -1,5 +1,6 @@
 
 @use 'aux' as a;
+@use 'cxPromessa' as prom;
 @use 'slide' as sld;
 @use 'cultos' as cult;
 @use 'pastores' as past;
@@ -7,6 +8,7 @@
 @mixin corpo{
 
     main{
+
         z-index: 0;
         position:relative; //relative
         //Coloca todo o corpo no centro.
@@ -18,13 +20,15 @@
         border-radius:55px 55px 0 0;
 
         width: 1000px;//era 1000px
-        height: 92%;
+        height: 100%;
 
 //!!  LEMBRAR DE COLOCAR DE VOLTA PRA AUXIAR O DESENVOLVIMENTO !!
 
         //@include a.bd(purple);
         //background-color: orange;
 
+        //Promessas
+        @include prom.Promessa;
 
         //Slide
         @include sld.modulo1;

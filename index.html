@@ -19,6 +19,26 @@
         -->
         <main>
 
+            <!--Caixa de promessas-->
+            <section class='caixa0'>
+                <div class='conteiner-cx0'>
+
+                    <div class='palavra-cx0'>
+
+                        <p class='mensagem-cx0' id='palavra-cx0'>“Porque Deus amou o mundo de tal maneira, que deu o seu Filho Unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna”</p>
+                        <br>
+                        <p class="livro-cx0" id='livro-cx0'>João 3:16</p>
+
+                    </div>
+
+                    <div class='botoes-cx0'>
+                        <div class='bt-cx0'></div>
+                    </div>
+
+                </div><!--Final de conteiner-cx0 -->
+                
+            </section>
+
             <section class="caixa1">
 
                 <h1>Ignição!</h1>
@@ -207,7 +227,7 @@
 
             function Passa(){
 
-                console.log('entrou a = '+ a);
+                //console.log('entrou a = '+ a);
                 
 
                 if(a > 4){
@@ -221,7 +241,7 @@
                     document.getElementById('radio'+a).checked = true;
                     //if(a==1){a=5;}
 
-                    console.log('foi a = ' + a);
+                    //console.log('foi a = ' + a);
      
                 
             }//Final de 'Passa'
@@ -275,7 +295,7 @@
                     b = 8;
                 }
 
-                console.log('Pastor = ' + b);
+                //console.log('Pastor = ' + b);
                 document.getElementById(`radioPr${b}`).checked = true;
 
                 
@@ -288,7 +308,7 @@
             //Ouve o esquerdo
             st[0].addEventListener('click', function(event){
 
-                console.log('B esquerdo dos Pastores');
+                //console.log('B esquerdo dos Pastores');
 
                 b--;
                 Passa2();
@@ -299,12 +319,102 @@
             //Ouve o direito
             st[1].addEventListener('click', function(){
 
-                console.log('B direito dos Pastores');
+                //console.log('B direito dos Pastores');
 
                 b++;
                 Passa2();
                 event.stopPropagation();
             });
+
+
+            //Caixa de Promessas
+
+            let btReload = document.getElementsByClassName('bt-cx0');
+
+            btReload[0].addEventListener('click', clickReload, false);
+
+            let rotasaoAux = 0;
+            function clickReload(event){
+
+                conectaPromessa();
+          
+                console.log(rotasaoAux);
+
+                rotasaoAux -= 360;
+
+                btReload[0].style.transform = `rotate(${rotasaoAux}deg)`;
+            
+
+
+
+/*
+                btReload[0].style.animationName = 'ani';
+                btReload[0].style.animationDuration = '1s';
+                btReload[0].style.animationIterationCount = '1';
+                
+*/        
+            
+                event.stopPropagation();
+
+            }
+
+            
+            function conectaPromessa(){
+                
+                let palavra = document.querySelector('#palavra-cx0');
+                let livro = document.querySelector('#livro-cx0');
+
+                let url = 'https://app.universal.org/app/api/promessas?limit=50&platform=web';
+
+                let promesa = fetch(url);
+                
+                promesa.then((resolve, reject)=>{
+
+                    console.log(resolve);
+
+                    //'.json()' uma promise q tem os dados no resolve
+                    resolve.json().then((resolve, reject)=>{
+
+                        let obj = resolve;
+                        console.log(obj);
+
+                        let dado = obj.data;
+
+                        console.log(dado);
+                        console.log(dado.text);
+                        console.log(dado.title);
+
+                        
+                       
+
+                        let regula = dado.title.split(" ");
+
+                        if(regula[0] !== 'Frases'){
+                            palavra.textContent = dado.text;
+                            livro.textContent = dado.title;
+
+                        }else{
+
+                            console.log('PROXIMAAAAAA!!!');
+                           
+                            //Faz a requisição novamente.
+                            conectaPromessa();
+                            
+                           
+
+                        }
+
+                        
+
+
+                    }).catch((erro)=>{
+                        console.log("Erro na hora de pegar o dado: " + erro);
+                    });
+
+                    console.log(dado);
+
+                }).catch((erro)=>{});
+            }
 
 
 
