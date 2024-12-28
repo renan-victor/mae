@@ -389,6 +389,7 @@
 
                         let regula = dado.title.split(" ");
 
+                        //Para evitar 'Frases do bispo Macedo'
                         if(regula[0] !== 'Frases'){
                             palavra.textContent = `"${dado.text}"`;
                             livro.textContent = dado.title;
